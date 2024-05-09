@@ -2,9 +2,14 @@ import Magician from "../Magician";
 
   test("Magician object", () => {
     const result = new Magician("Andrew");
-    expect(result.health).toBe(100);
-    expect(result.level).toBe(1);
-    expect(result.type).toBe("Magician");
-    expect(result.attack).toBe(10);
-    expect(result.defence).toBe(40);
+    const test = {
+      name: "Andrew",
+      type: "Magician",
+      health: 100,
+      level: 1,
+      attack: 10,
+      defence: 40,
+    }
+    
+    expect(result).toEqual(test);
   })

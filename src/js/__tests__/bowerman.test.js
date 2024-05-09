@@ -3,9 +3,13 @@ import Bowerman from "../Bowerman";
   
   test("Bowerman object", () => {
     const result = new Bowerman("Andrew");
-    expect(result.health).toBe(100);
-    expect(result.level).toBe(1);
-    expect(result.type).toBe("Bowerman");
-    expect(result.attack).toBe(25);
-    expect(result.defence).toBe(25);
+    const test = {
+      name: "Andrew",
+      type: "Bowerman",
+      health: 100,
+      level: 1,
+      attack: 25,
+      defence: 25,
+    }
+    expect(result).toEqual(test);
   })
