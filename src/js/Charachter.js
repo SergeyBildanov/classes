@@ -1,12 +1,14 @@
 export default class Charachter {
     constructor(name, type){
+        const types = ["Bowerman", "Daemon", "Magician", "Swordsman", "Undead", "Zombie"];
+        
         if(name.length < 2){
             throw new Error("Имя персонажа слишком короткое!");
         }
         if(name.length > 10) {
             throw new Error("Имя персонажа слишком длинное!");
         }
-        if(!["Bowerman", "Daemon", "Magician", "Swordsman", "Undead", "Zombie"].includes(type)){
+        if(!types.includes(type)){
             throw new Error("Недопустимый тип персонажа!");
         }
         this.name = name;
